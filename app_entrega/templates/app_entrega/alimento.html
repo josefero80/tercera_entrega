@@ -1,0 +1,35 @@
+{% extends 'app_entrega/base.html' %}
+
+{% load static %}
+
+{% block title %}Alimentos{% endblock title %}
+
+{% block content %}
+
+<br><br>
+
+<form action= "{% url 'buscar_al' %}" method="GET">
+    <input type="text" name="busqueda_al">
+    <input type="submit" value="Buscar">
+
+</form>
+<br><br>
+<table class="table">
+    <tbody>
+        <tr>
+            <th>Nombre alimento</th>
+            <th>Categoria alimento</th>
+            <th>precio alimento</th>
+        </tr>
+        {% for alimento in alimentos %}
+        <tr>
+            <td>{{ alimento.nombre_al }}</td>
+            <td>{{ alimento.categoria_al }}</td>
+            <td>{{ alimento.precio_al }}</td>
+        </tr>  
+        {% endfor %}  
+    </tbody>
+</table>
+
+
+{% endblock content %}

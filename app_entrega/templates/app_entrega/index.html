@@ -1,0 +1,25 @@
+{% extends 'app_entrega/base.html' %}
+
+{% load static %}
+
+{% block title %}Bienvenidos Pets shop{% endblock title %}
+
+{% block content %}
+
+<h2>Escoge una opcion: </h2>
+<br>
+<br>
+<ul>
+    <li><a class="nav-link" href="{% url 'alimento_mascotas' %}">Alimentos</a></li>
+    <li><a class="nav-link" href="#!">Accesorios</a></li>
+    <li><a class="nav-link" href="#!">Juguetes</a></li>
+    
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock content %}
