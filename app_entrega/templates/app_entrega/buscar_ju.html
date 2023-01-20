@@ -9,11 +9,11 @@
 
 
 <h3>Estas buscando Juguete: {{ query }}</h3>
-{% if juguete %}
-    <p>Alimentos encontrados: {{juguete|length}} Juguetes</p>
+{% if articulo %}
+    <p>Alimentos encontrados: {{articulo|length}} Juguetes</p>
 
     <ul>
-        {% for jug in juguete %}
+        {% for jug in articulo %}
             <li>
                 {{ jug.nombre_ju }}
             </li>
