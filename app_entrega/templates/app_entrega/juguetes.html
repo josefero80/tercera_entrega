@@ -1,0 +1,36 @@
+{% extends 'app_entrega/base.html' %}
+
+{% block title %} Juguetes {% endblock title %}
+
+{% block content %}
+ 
+<br><br>
+<form action= "{% url 'buscar_ju' %}" method="GET">
+
+    <input type="text" name='query_ju'>
+    <input type="submit" value="Buscar">
+</form>
+<br>
+{% comment %} {% url 'insertar_juguete' %} {% endcomment %}
+<p><a href="">Insertar juguete</a></p>
+<br><br>
+<table class="table">
+    <tbody>
+        <tr>
+            <th>Nombre juguetes</th>
+            <th>Categoria juguetes</th>
+            <th>Precio juguetes</th>
+        </tr>
+        {% for juguete in juguetes %}
+        <tr>
+            
+            <td>{{ juguete.nombre_ju }}</td>
+            <td>{{ juguete.categoria_ju }}</td>
+            <td>{{ juguete.precio_ju }}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}

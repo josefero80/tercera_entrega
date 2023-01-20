@@ -1,0 +1,32 @@
+{% extends 'app_entrega/base.html' %}
+
+{% block title %} Resultado busqueda accesorios {% endblock title %}
+<br><br>
+
+{% block content %}
+
+<h3>El accesorio que buscas es: {{ query }}</h3>
+
+{% if accesorios %}
+
+    <p>Elementos encontrados: {{ accesorios|length }}</p>
+
+    <ul>
+
+    {% for accesorio in accesorios %}
+        
+            <li>{{accesorio.nombre_ac}}</li>
+        
+    {% endfor %}
+
+    </ul>
+
+{% else %}
+    <p>Accesorio no encontrado.... </p>
+    
+{% endif %}
+
+
+{% endblock content %}
+
+

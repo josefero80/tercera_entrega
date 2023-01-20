@@ -1,0 +1,24 @@
+{% extends 'app_entrega/base.html' %}
+
+{% block title %} Ingresar informacion alimento {% endblock title %}
+
+{% block content %}
+
+<h3>Ingresa los datos del producto alimento:</h3>
+<br>
+
+
+<form action= "{% url 'insertar_alimento' %}" method='POST'> {% csrf_token %}
+    <p>Nombre alimento: <input type="text" name='nombreAl'></p>
+    <p>Categoria: <input type="text" name="categoriaAl"></p>
+    <p>Precio: <input type="text" name="precioAl"></p>
+    <p><input type="submit" value="Guardar"></p>
+
+</form>
+<br><br>
+<br>
+<a href="{% url 'alimento_mascotas' %}">Volver lista</a>
+
+{% endblock content %}
+
+

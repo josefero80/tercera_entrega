@@ -1,0 +1,22 @@
+{% extends 'app_entrega/base.html' %}
+
+{% block title %} Ingresar Juguete {% endblock title %}
+
+{% block content %}
+
+<h3>Ingresa los datos del juguete:</h3>
+<br>
+
+
+<form action= "{% url 'insertar_juguete' %}" method='POST'> {% csrf_token %}
+    <p>Nombre juguete: <input type="text" name='nombreJu'></p>
+    <p>Categoria: <input type="text" name="categoriaJu"></p>
+    <p>Precio: <input type="text" name="precioJu"></p>
+    <p><input type="submit" value="Guardar"></p>
+
+</form>
+<br><br>
+<br>
+<a href="{% url 'juguete_mascotas' %}">Volver lista</a>
+
+{% endblock content %}

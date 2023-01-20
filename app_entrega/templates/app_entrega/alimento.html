@@ -10,9 +10,10 @@
 
 <form action= "{% url 'buscar_al' %}" method="GET">
     <input type="text" name="busqueda_al">
-    <input type="submit" value="Buscar">
-
+    <input type="submit" value="Buscar">    
 </form>
+<br>
+<p><a href="{% url 'insertar_alimento' %}">Insertar alimento</a></p>
 <br><br>
 <table class="table">
     <tbody>

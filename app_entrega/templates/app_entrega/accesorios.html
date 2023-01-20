@@ -1,0 +1,34 @@
+{% extends 'app_entrega/base.html' %}
+
+{% block title %} Accesorios {% endblock title %}
+
+{% block content %}
+
+<br><br>
+<form action= "{% url 'buscar_acc' %}" method="GET">
+    <input type="text" name='query_acc'>
+    <input type="submit" value="Buscar">
+</form>
+<br>
+<p><a href="{% url 'insertar_accesorio' %}">Insertar accesorio</a></p>
+<br><br>
+<table class="table">
+    <tbody>
+        <tr>
+            <th>Nombre Accesorio</th>
+            <th>Categoria Accesorio</th>
+            <th>Precio Accesorio</th>
+        </tr>
+        {% for accesorio in accesorios %}
+        <tr>
+            
+            <td>{{ accesorio.nombre_ac }}</td>
+            <td>{{ accesorio.categoria_ac }}</td>
+            <td>{{ accesorio.precio_ac }}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}

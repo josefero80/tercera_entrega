@@ -1,0 +1,29 @@
+{% extends 'app_entrega/base.html' %}
+
+
+{% block title %} buscar alimentos {% endblock title %}
+
+<br><br>
+
+{% block content %}
+
+
+<h3>Estas buscando Juguete: {{ query }}</h3>
+{% if juguete %}
+    <p>Alimentos encontrados: {{juguete|length}} Juguetes</p>
+
+    <ul>
+        {% for jug in juguete %}
+            <li>
+                {{ jug.nombre_ju }}
+            </li>
+        {% endfor %}
+    </ul>
+    
+{% else %}
+    <p>El juguete buscado no se encuentra.. </p>
+
+{% endif %}
+
+{% endblock content %}
+<br><br>

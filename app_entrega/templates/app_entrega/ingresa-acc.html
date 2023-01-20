@@ -1,0 +1,22 @@
+{% extends 'app_entrega/base.html' %}
+
+{% block title %} Ingresar informacion accesorio {% endblock title %}
+
+{% block content %}
+
+<h3>Ingresa los datos del accesorio:</h3>
+<br>
+
+
+<form action= "{% url 'insertar_accesorio' %}" method='POST'> {% csrf_token %}
+    <p>Nombre accesorio: <input type="text" name='nombreAc'></p>
+    <p>Categoria: <input type="text" name="categoriaAc"></p>
+    <p>Precio: <input type="text" name="precioAc"></p>
+    <p><input type="submit" value="Guardar"></p>
+
+</form>
+<br><br>
+<br>
+<a href="{% url 'accesorios_mascotas' %}">Volver lista</a>
+
+{% endblock content %}
