@@ -1,4 +1,4 @@
-# tercera_entrega
+# Tercera_entrega, Jose Ojeda
 Tercera entrega comision: 47635 - Petshop
 Por medio de esta pequeña app de ejercicio, tengo 3 tablas, cada una de ellas contiene, nombre del producto, categoria (gato, perro) y precio.
 En la pagina principal está el index con tres opciones donde navegar (Alimentos, Accesorios, juguetes), cuando se hace click en una de ellas, lo lleva
